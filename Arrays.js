@@ -37,3 +37,66 @@ a[2] // accessing 3rd element
 
 //..... So On  
 a[a.length-1] // accessing last element
+
+
+
+/**
+ *  Extra Concepts on Index :
+ * 
+ *  If we have an array with name 
+ *      a = [1,2,3,4,5,6]
+ *  
+ *  1. length of array = a.length
+ *  2. Let us call index numbers as i
+ * 
+ *  3. Index starts from 0 and goes till a.length-1
+ * 
+ *  4. Can we define index number (i) in form of a mathematical inquality :
+ *      
+ *      0 <= i < a.length
+ *      
+ *      In english it is read as, any index of array starts from and goes till a.length
+ */
+
+
+/**
+ * Answer these questions:
+ *  
+ *  var a = [1,2,3,4,5]
+ * 
+ *  ques 1: what is the value of array at index 2 => a[2] gives 3
+ * 
+ *  ques 2: What is the value of array which is at an index which is equal to the 
+ *          value of array at index 2
+ *          
+ *          => index = a[2]
+ *          => ans = a[index]   final answer = 4
+ * 
+ *          This can also be written as 
+ *          
+ *          => ans = a[a[2]]
+ * 
+ *          
+ */
+
+
+/**
+ * Iteration on arrays using Maps:
+ *  
+ *  1. map is a array method which iterates over all the elements of array 1 by 1 and returns the desired value
+ *  2. map accepts an arrow function whose first paramter is value of the array element and second paramter is its index
+ *  3. map must return a value
+ *  4. the output of map method is an array
+ * 
+ *  See below example
+ */
+
+var a = [1,2,3,4]
+
+// Ask is to double the value of each element and create a new array, Code is as follows
+
+var b = a.map((value, index) => {
+    return value*2;
+});
+
+// b will have [2,4,6,8]
