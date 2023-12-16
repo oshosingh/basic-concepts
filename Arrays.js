@@ -100,3 +100,54 @@ var b = a.map((value, index) => {
 });
 
 // b will have [2,4,6,8]
+
+
+
+/** 
+ *  Iteration using loops
+ * 
+ */
+
+// Using for loop
+
+var a = [1,2,3,4]
+
+for(var i=0; i<a.length; i++) {
+    a[i] = a[i]*2;
+}
+
+
+
+/**
+ *  Multi-dimension array or nested arrays
+ */
+
+var a = [
+    [1,2,3], i=0, 
+    [4,4,4], i=1
+    [6,7,8,9], i=2
+];
+
+// Double the value of each element
+
+for(var i=0; i<a.length; i++) {
+
+    for(var j=0; j<a[i].length; j++) {
+        a[i][j] = a[i][j]*2;
+    }
+}
+
+// Same code using map method
+
+/**
+ * In case of nested arrays the first parameter of map is an array
+ * so to perform or update the values, add nested map method on that value
+ */
+var b = a.map((value, index) => {
+
+    return value.map((value2, index2) => {
+        return value2*2;
+    })
+}); 
+
+// B = [[2,4,6], [8,8,8], [12,14,16,18]]
